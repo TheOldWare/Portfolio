@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     align-items: center;
     border-style: solid;
+    border-width: 3px;
     animation: darkRedBorderLoop 1.5s infinite;
 }
 @keyframes darkRedBorderLoop {
@@ -43,15 +44,14 @@ body {
     font-size: 3rem;
     text-align: center;
     letter-spacing: 5px;
-    cursor: default;
 }
 
 .github{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: inline-flex;
     max-width: 50px;
-    padding: 25px;
+    padding: 6px;
     filter: invert(100%);
 }
 
@@ -65,16 +65,84 @@ body {
 }
 
 .perfil-pic {
-    width: 200px; /* Largura fixa para cada imagem */
-    height: 200px; /* Altura fixa para cada imagem */
-    object-fit: cover; /* Corta a imagem para preencher o espaço */
-    border-radius: 50%; /* Torna a imagem circular */
-    border: 4px solid #fff; /* Borda branca ao redor da imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Imagem circular */
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4); /* Sombra mais suave e circular */
+    transition: all 0.3s ease; /* Transição suave para tudo */
+    overflow: hidden; /* Garante que a sombra respeite o círculo */
+    display: block;
 }
 
+/* Hover: aumenta e sombra mais forte */
 .perfil-pic:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+}
+
+.card{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(10,0,40);
+    border-radius: 16px;
+    padding: 1rem;
+    max-width: 600px;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.nome{
+    color: rgba(250, 250, 240);
+    font-size: 3rem;
+    padding: 2px;
+}
+
+.txt{
+    color: #DADADA;
+    font-size: 1.8rem;
+    padding: 20px;
+    letter-spacing: 1px;
+}
+.txt2{
+    color: #DADADA;
+    font-size: 2rem;
+    padding: 20px;
+    letter-spacing: 1px;
+}
+
+.st{
+    color: #5DD12A;
+}
+
+.tech-html{ color: orange; }
+.tech-css{ color: blue; }
+.tech-js{ color: yellow; }
+
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.insta,
+.reddit{
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    padding: 6px;
+    justify-content: center;
+}
+
+.social-links{
+    display: block;
+    width: 100px;
+    height: 100px;
 }
